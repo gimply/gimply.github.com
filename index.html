@@ -35,21 +35,23 @@
             border-top-left-radius: 15px;
             border-top-right-radius: 15px;
             font-weight: bold;
-            color: gray;
-            text-shadow: white 0px 1px 0, black 0 -1px 0;
+            /*text-shadow: white 0px 1px 0, black 0 -1px 0;*/
             text-align: left;
             font-size: 22px;
             line-height: 35px;
             text-align: center;
+            text-shadow: 0 2px white;
+            color: #666;
+            font-family: Helvetica, Arial, Verdana, sans-serif;
         }
         div.head > div {
             display: table-cell;
         }
         .screen_shot img {
             width: 750px;
+            margin-top: 45px;
         }
         div.head .text {
-            padding-left: 25px;
             padding-top: 20px;
         }
         .container {
@@ -118,14 +120,21 @@
         }
         a.install {
             display: block;
-            width: 15em;
+            width: 9em;
             margin: auto;
             margin-top: 25px;
             margin-bottom: 25px;
+            font-weight: bold;
+            padding: 8px;
+            font-size: 13px;
         }
         .foot{
             padding-top: 25px;
             font-size: 12px;
+        }
+        plus {
+            font-weight: normal;
+            font-size: 0.8em;
         }
     </style>
 </head>
@@ -138,10 +147,10 @@
             <img src="images/gimply128.png" class="gimply_logo"/>
             </div>
            	<div class="text">
-                   Commits, Issues  &
-                   Stand-up Updates <br/>
+                   Commits <plus>+</plus> Github Issues <plus>+</plus>
+                   Standup Updates <br/>
                    <p class="sub">
-                   in one view on <img src="images/github.png" class="github_logo"/>
+                   on <img src="images/github.png" class="github_logo"/>
                    </p>
            	</div>
             </div>
@@ -153,13 +162,10 @@
 
         <div class="content">
         <div>
-            Gimply runs as a Google Chrome Extension.
-            When you visit a Github repository page using Google Chrome,
-            Gimply introduces an <em>Updates</em> tab. <br/>
-            The tab shows a view like the above.
+            Gimply is a chrome extension. It displays the repository's commits, issues and standup updates in a beautiful view in a
+            new Updates tab. You can see it in action when you visit any github repository page.
             <a class="button logo-color medium install" href="https://chrome.google.com/webstore/detail/plgiinlmeidhlndoplohankgbnfkjcec">
-                <img src="images/chrome_logo.png" height="14px" style="margin-right: 4px">
-                Install Chrome Extension
+                Install Gimply
             </a>
         </div>
         <div class="foot">
