@@ -7,21 +7,165 @@
         body, div {
             margin: 0;
             padding: 0;
-            overflow: hidden;
             box-sizing: border-box;
+            font-family: arial;
+        }
+        .gimply_logo {
+            height: 80px;
+            width: 80px;
+            margin-right: 15px;
+        }
+        .github_logo {
+            height: 16px;
+        }
+        .head {
+            background: #FAFAFA;
+            background: -moz-linear-gradient(#FAFAFA,#EAEAEA);
+            background: -webkit-linear-gradient(#FAFAFA,#EAEAEA);
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa',endColorstr='#eaeaea')";
+            position: relative;
+            z-index: 10;
+            border-bottom: 1px solid #CACACA;
+            box-shadow: 0 1px 0 rgba(255,255,255,0.4),0 0 10px rgba(0,0,0,0.1);
+            height: 125px;
+            padding: 15px;
+            padding-top: 25px;
+            display: table;
+            width: 100%;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            font-weight: bold;
+            color: gray;
+            text-shadow: white 0px 1px 0, black 0 -1px 0;
+            text-align: left;
+            font-size: 22px;
+            line-height: 35px;
+            text-align: center;
+        }
+        div.head > div {
+            display: table-cell;
+        }
+        .screen_shot img {
+            width: 750px;
+        }
+        div.head .text {
+            padding-left: 25px;
+            padding-top: 20px;
+        }
+        .container {
+            padding-bottom: 30px;
+        }
+        a, a:hover {
+            color: #8908D4;
+        }
+
+        .button, a.button  {
+            display: inline-block;
+            zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
+            *display: inline;
+            vertical-align: baseline;
+            margin: 0 2px;
+            outline: none;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            font: 12px/100% Arial, Helvetica, sans-serif;
+            padding: .5em 1em .55em;
+            text-shadow: 0 1px 1px rgba(0,0,0,.3);
+            -webkit-border-radius: .5em;
+            -moz-border-radius: .5em;
+            border-radius: .5em;
+            -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+            -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+            box-shadow: 0 1px 2px rgba(0,0,0,.2);
+        }
+        .button:hover {
+            text-decoration: none;
+        }
+        .button:active {
+            position: relative;
+            top: 1px;
+        }
+        .medium {
+            font-size: 12px;
+            padding: .4em 1.5em .42em;
+        }
+        .logo-color {
+            background: -webkit-gradient( linear, left bottom, left top, color-stop(0.1,#8908D4), color-stop(0.55,#AD5EDB), color-stop(0.78, #B963EB));
+            color: white;
+            font-family: arial;
+            font-size: 15px;
+            margin-top: 25px;
+        }
+        .logo-color:hover {
+            background: -webkit-gradient(
+                linear,
+                left bottom,
+                left top,
+                color-stop(0.1, rgb(145,18,224)),
+                color-stop(0.55, rgb(173,94,219)),
+                color-stop(0.78, rgb(202,147,237))
+            );
+            color: white;
+        }
+        .content {
+            padding: 40px 0;
+            font-size: 17px;
+            line-height: 22px;
+            text-align: center;
+            width: 700px;
+            margin: auto;
+        }
+        a.install {
+            display: block;
+            width: 15em;
+            margin: auto;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+        .foot{
+            padding-top: 25px;
+            font-size: 12px;
         }
     </style>
 </head>
-<body style="background-color: #eee; height: 100%; padding: 20px; position: absolute; top: 0; bottom: 0; left: 0; right: 0">
-<div class="row container" style="background-color: #fff; border: 1px solid #ddd; border-radius: 15px; height: 100%">
-    <div class="row span8 offset2" style="text-align: center; padding-top: 30px">
-        <div>
-            <img src="images/gimply128.png" />
-           	<p>see nice consolidated view of recent updates by contributor</p>
+<body style="background-color: #eee; height: 100%; padding: 20px;">
+<div class="container" style="background-color: #fff; border: 1px solid #ddd; border-radius: 15px; ">
+    <div style="text-align: center;">
+        <div class="head">
+            <div id="head_block">
+            <div>
+            <img src="images/gimply128.png" class="gimply_logo"/>
+            </div>
+           	<div class="text">
+                   Commits, Issues  &
+                   Stand-up Updates <br/>
+                   <p class="sub">
+                   in one view on <img src="images/github.png" class="github_logo"/>
+                   </p>
+           	</div>
+            </div>
         </div>
+
+        <div class="screen_shot">
+            <img src="images/updates_tab.png"/>
+        </div>
+
+        <div class="content">
         <div>
-       	Github url: <a href="https://github.com/gramki/gimply">https://github.com/gramki/gimply</a>
+            Gimply runs as a Google Chrome Extension.
+            When you visit a Github repository page using Google Chrome,
+            Gimply introduces an <em>Updates</em> tab. <br/>
+            The tab shows a view like the above.
+            <a class="button logo-color medium install" href="https://chrome.google.com/webstore/detail/plgiinlmeidhlndoplohankgbnfkjcec">
+                <img src="images/chrome_logo.png" height="14px" style="margin-right: 4px">
+                Install Chrome Extension
+            </a>
+        </div>
+        <div class="foot">
+       	    Github url: <a href="https://github.com/gramki/gimply">https://github.com/gramki/gimply</a>
        	</div>
+        </div>
     </div>
 </div>
 </body>
